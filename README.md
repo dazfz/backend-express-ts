@@ -1,5 +1,7 @@
 # Backend Express + TypeScript Boilerplate
 
+![My Skills](https://skillicons.dev/icons?i=nodejs,express,typescript)
+
 Node.js + Express + TypeScript boilerplate for building REST APIs.
 
 ## Instructions
