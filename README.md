@@ -1,32 +1,42 @@
-# Backend Express + TypeScript Boilerplate
+# Express + TypeScript Backend Boilerplate
 
-![My Skills](https://skillicons.dev/icons?i=nodejs,express,typescript)
+![Skills](https://skillicons.dev/icons?i=nodejs,express,typescript)
 
 Node.js + Express + TypeScript boilerplate for building REST APIs.
 
-## Instructions
+If you're interested in using MongoDB, check out the [MongoDB branch](https://github.com/dazfz/backend-express-ts/tree/mongodb).
 
-1. Install the required dependencies:
+## Getting Started
+
+1. **Clone the Repository:** Begin by cloning the repository to your local machine:
+
+   ```bash
+   git clone git@github.com:dazfz/backend-express-ts.git
+   cd backend-express-ts
+   ```
+
+2. **Install Dependencies:** Install the required dependencies using npm:
 
    ```bash
    npm install
    ```
 
-2. Run the development server:
+3. **Run Development Server:** Start the development server:
 
    ```bash
    npm run dev
    ```
 
-3. For production build:
+4. **Production Build:** To create a production build, run:
 
    ```bash
    npm run tsc
    ```
 
-   This will create a production build in the `build` directory.
+   This will generate a production build in the `build` directory.
 
-4. Then, start the production server:
+5. **Start Production Server:** Start the production server:
+
    ```bash
    npm start
    ```
@@ -62,5 +72,5 @@ Node.js + Express + TypeScript boilerplate for building REST APIs.
   - **models:** Contains the models related to the objects.
   - **routes:** Defines the API routes for the objects.
   - **services:** Houses the object-related services.
-  - **test:** This directory is intended for storing test-related files.
-  - **utils:** Provides utility modules such as configuration middleware, logger, and more.
+  - **tests:** This directory is intended for storing test-related files.
+  - **utils:** Provides utility modules such as configurations, middleware, and more.
