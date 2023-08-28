@@ -1,66 +1,81 @@
-# Backend Express + TypeScript Boilerplate
+# Backend Express + TypeScript + MongoDB Boilerplate
 
-![My Skills](https://skillicons.dev/icons?i=nodejs,express,typescript)
+![My Skills](https://skillicons.dev/icons?i=nodejs,express,ts,mongodb,jest)
 
-Node.js + Express + TypeScript boilerplate for building REST APIs.
+Node.js + Express + TypeScript + MongoDB boilerplate for building REST APIs. The boilerplate incorporates MongoDB Atlas for database management and Mongoose for handling database operations. Jest has been integrated for testing purposes.
+
+If you prefer a version of the boilerplate without MongoDB integration, you can find it at: [Backend Express TypeScript Boilerplate](https://github.com/dazfz/backend-express-ts)
+
+## Features
+
+- **MongoDB Setup**: Utilizes `Mongoose` to establish a MongoDB connection with a predefined basic object and user schema.
+- **Authentication**: Implements token-based user authentication with `jsonwebtoken`.
+- **Testing**: Includes comprehensive Jest tests with built-in support for API testing using `Supertest`.
 
 ## Instructions
 
-1. Install the required dependencies:
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**: Begin by cloning the repository to your local machine:
+
+   ```bash
+   git clone git@github.com:dazfz/backend-express-ts.git
+   cd backend-express-ts
+   git checkout mongodb
+   ```
+
+2. **Installation**: Install the necessary dependencies:
 
    ```bash
    npm install
    ```
 
-2. Run the development server:
+3. **Configuration**: Adjust the configuration settings in the `.env` file to align with your specific requirements.
+
+4. **Development Server**: Initiate the development server:
 
    ```bash
    npm run dev
    ```
 
-3. For production build:
+5. **Production Build**: For production deployment, create a production build:
 
    ```bash
    npm run tsc
    ```
 
-   This will create a production build in the `build` directory.
+   This will generate a production build within the `build` directory.
 
-4. Then, start the production server:
+6. **Start Production Server**: Launch the production server:
+
    ```bash
    npm start
    ```
 
-## Packages
+7. **Testing**: Execute tests using the following command:
+
+   ```bash
+   npm test
+   ```
+
+## Additional Packages
 
 ### Production:
 
-- **express**: Backend framework.
-- **cors**: Cross-origin resource sharing. Required if the frontend and backend run on different ports.
-- **dotenv**: Loads environment variables from a `.env` file.
+- **bcrypt**: Used for enhancing password security through hashing.
+- **cross-env**: Facilitates cross-platform environment variable configuration.
+- **express-async-errors**: Streamlines error handling within asynchronous Express code.
+- **jsonwebtoken**: Enables token generation for authentication.
+- **mongoose**: MongoDB object modeling tool.
+- **mongoose-unique-validator**: Provides validation for unique fields in Mongoose schemas.
 
 ### Development:
 
-- **ts-node**: TypeScript execution environment for Node.js. Not strictly required, but useful for running TypeScript code directly.
-- **typescript**: TypeScript language support.
-- **ts-node-dev**: Auto-reloading for TypeScript files, similar to `nodemon`.
-- **eslint**: Linting tool for identifying and enforcing code style. Not required.
-- **@typescript-eslint/eslint-plugin**: TypeScript-specific ESLint rules.
-- **@typescript-eslint/parser**: Parser that allows ESLint to lint TypeScript code.
-- **morgan**: HTTP request logger middleware. Useful for development and debugging, not required in all cases.
-- **@types/express**: Type definitions for Express.js.
-- **@types/cors**: Type definitions for the cors package.
-- **@types/morgan**: Type definitions for the morgan logger.
-
-## Project Directories
-
-- **build:** This directory contains the production build of the backend.
-- **dist:** Here, you can find the production build of the frontend.
-- **requests:** This directory includes request files that are used for testing the API with the Visual Studio Code (VSCode) `Rest Client` extension.
-
-- **src:**
-  - **models:** Contains the models related to the objects.
-  - **routes:** Defines the API routes for the objects.
-  - **services:** Houses the object-related services.
-  - **test:** This directory is intended for storing test-related files.
-  - **utils:** Provides utility modules such as configuration middleware, logger, and more.
+- **jest**: Testing framework.
+- **supertest**: A utility for testing HTTP assertions.
+- **ts-jest**: Enables TypeScript support within Jest.
+- **@types/bcrypt**: TypeScript type definitions for bcrypt.
+- **@types/jest**: TypeScript type definitions for Jest.
+- **@types/jsonwebtoken**: TypeScript type definitions for jsonwebtoken.
+- **@types/mongoose-unique-validator**: TypeScript type definitions for mongoose-unique-validator.
+- **@types/supertest**: TypeScript type definitions for supertest.
