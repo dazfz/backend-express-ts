@@ -1,6 +1,39 @@
+### Create user
+POST http://localhost:3000/api/users/ 
+content-type: application/json
+
+{
+"username": "user", "password": "password"
+}
+
+### Get all users
+GET http://localhost:3000/api/users/
+
+### Login with a user
+POST http://localhost:3000/api/login 
+content-type: application/json
+
+{
+"username": "user", "password": "password"
+}
+
+### Create an object (need to be logged in)
+POST http://localhost:3000/api/objects/ 
+content-type: application/json 
+Authorization: bearer <token>
+
+{
+"name":"name"
+}
+
+### Get all objects
 GET http://localhost:3000/api/objects/
 
-###
-POST http://localhost:3000/api/objects/ 
+### Get an object
+GET http://localhost:3000/api/objects/<id>
+
+### Delete the object (need to be logged in)
+DELETE http://localhost:3000/api/objects/<id>
+Authorization: bearer <token>
 
 

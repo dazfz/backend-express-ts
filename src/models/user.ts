@@ -2,20 +2,21 @@ import { Model, DataTypes } from "sequelize";
 
 import { sequelize } from "../utils/db";
 
-class MyObject extends Model {
+export class User extends Model {
   public id!: number;
-  public name!: string;
+  public username!: string;
 }
 
-MyObject.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.TEXT,
+    username: {
+      type: DataTypes.STRING,
+      unique: true,
       allowNull: false,
     },
   },
@@ -23,8 +24,8 @@ MyObject.init(
     sequelize,
     underscored: true,
     timestamps: false,
-    modelName: "myobject",
+    modelName: "user",
   }
 );
 
-export default MyObject;
+export default User;
